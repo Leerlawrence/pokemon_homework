@@ -2,6 +2,7 @@
 <!-- <meta http-equiv="refresh" content="5; url='http://localhost/index.html:3000'">   -->
 <HTML>
 <HEAD>
+<link rel="icon" href="/images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style.css">
 </HEAD>
 <BODY>
@@ -9,13 +10,48 @@
 <CENTER>
 <DIV><img src="http://localhost:3000/images/clantrainers.jpg" alt="Gotta catch em all"/>
 <br><br>
-<a href = "map.html">
+<a href = "javascript:AlertIt1()"> 
 <img src="/images/pokeball.jpeg" alt="Gotta catch em all"/>
 </a>
+
+<a href = "map.html" onclick=warn()>
 <img src="/images/pokeball.jpeg" alt="Gotta catch em all"/>
+</a>
+
+<a href = "javascript:AlertIt()"> 
 <img src="/images/pokeball.jpeg" alt="Gotta catch em all"/>
-<H3>Select your pokeball>
+</a>
+
+
+<h1>Select your pokeball</h1>
+
+
+
+
 </DIV>
+<script>
+function warn(){
+  alert("Oh $%*$!! YOU'VE DROPPED IT!! This ain't the early morning scrum - this has serious reprocussions - all of your pokemon have escaped - you better Go Catch \'em all - AGAIN!");
+  //document.location = 'map.html
+}
+
+function AlertIt() {
+var answer = alert("You don't wanna take that one, it\'s Jeff\'s - he\'ll take you down!")
+if (answer)
+window.location="";
+}
+
+function AlertIt1() {
+var answer = alert("Please do not disturb, Robbie had a rough night and he's asleep in this one!")
+if (answer)
+window.location="";
+}
+
+
+</script>
+
+
+
 
 
 <!-- <DIV><img src="http://localhost:3000/pokemonsm.gif" alt="Gotta catch em all"/></DIV> -->

@@ -1,5 +1,7 @@
 <html>
   <head>
+
+  <link rel="icon" href="http://example.com/favicon.png">
     <title>Pokemon Gone - Gotta get a life</title>
     <script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js"> </script>
     <script src='index.js'></script>
@@ -9,16 +11,123 @@
 
     <h1>Pokemon Gone</h1>
     
+
+        <script type="text/javascript" src=https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+        <script type="text/javascript">
+          function initialize(){
+
+            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+            var icons = {
+              parking: {
+                icon: iconBase + 'parking_lot_maps.png'
+              },
+              library: {
+                icon: iconBase + 'library_maps.png'
+              },
+              info: {
+                icon: iconBase + 'info-i_maps.png'
+              }
+            };
+
+            var triangleCoords = [
+              {lat: 55.934357, lng: -3.209697},
+              {lat: 55.928779, lng: -3.245230},
+              {lat: 55.952237, lng: -3.211585},
+              
+              {lat: 55.970878, lng: -3.171073},
+              {lat: 55.946855, lng: -3.113566},
+
+              {lat: 55.922816, lng: -3.150645}
+
+            ];
+
+            // Construct the polygon.
+            var bermudaTriangle = new google.maps.Polygon({
+              paths: triangleCoords,
+              strokeColor: '#FF0000',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#FF0000',
+              fillOpacity: 0.10
+            });
+
+
+            var myOptions = {
+              zoom:12,
+              center: new google.maps.LatLng(55.945443, -3.202644),
+              mapTypeId: google.maps.MapTypeId.ROADMAP}
+
+              map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+
+              var marker = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.945443, -3.202644),
+                map: map,
+                title: "Bulbasour",
+                url: "http://www.wikipedia.org/",
+                animation: google.maps.Animation.DROP,
+
+              });
+
+              infowindow1= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker,'click',function () {
+                //infowindow1.setContent("<a href=http://pokeapi.co/api/v2/pokemon/1/">+"Bulbasour is on the prowl - catch him while you can!></a>");
+                infowindow1.setContent("<a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR>Weight:=150")
+                infowindow1.open(map,marker);
+                // type: info
+              });
+
+              var marker1 = new google.maps.Marker( {
+                              position: new google.maps.LatLng(55.95, -3.202644),
+                              map: map,
+                              title: "Pikachu",
+                              animation: google.maps.Animation.DROP,
+                              // type: info
+                            });
+
+                            infowindow2= new google.maps.InfoWindow();
+                            listener=google.maps.event.addListener (marker1,'click',function () {
+                              infowindow1.setContent("Pikachu is here, you'd better hurry");
+                              infowindow1.open(map,marker1);
+                            });
+
+                            // Define the LatLng coordinates for the polygon's path.
+                                    
+                                                  bermudaTriangle.setMap(map);
+
+            }
+
+
+    // );
+
+    // var marker1 = new google.maps.Marker( {
+    //   position: new google.maps.LatLng(55.9, -3.3), map: map,
+    //   title: "Codeclan",
+    //   animation: google.maps.Animation.DROP,
+    //   type:parking
+    // }
+    // );
+
+
+    </script>
+
+    <div id="map_canvas" style="width:900px; height:800px;"></div>
+
+    <script type="text/javascript">
+      initialize();
+    </script>
+
+
    
-    <div id="question">Question</div>
+    <!-- <div id="question">Question</div>
     <br>
-  <!--   <p id="countryA">< -->
+  <!-- <!--   <p id="countryA">< -->
     <button id="more">More</button>
     <button id="less">Less</button>
     <hr>
     <div id="score">Score : 0</div>
     <br>
-    <div id = "map">map</div>
-
+    <div id = "map">map</div> -->
+ -->
   </body>
 </html>
