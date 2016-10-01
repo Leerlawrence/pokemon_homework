@@ -1,46 +1,69 @@
 <html>
-  <head>
+<head>
 
   <link rel="icon" href="http://example.com/favicon.png">
-    <title>Pokemon Gone - Gotta get a life</title>
-    <script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js"> </script>
-    <script src='index.js'></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+  <title>Pokemon Gone - Gotta get a life</title>
+  <script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js"> </script>
+  <script src='index.js'></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body >
 
-    <h1>Pokemon Gone</h1>
+
+  <table WIDTH="100%" BORDER='1'>
+
+    <th colspan="2" bgcolor="red"><CENTER><IMG SRC="./images/pokemonegone1.gif" />
+    </th>
     
+  </tr>
+  <tr>
+    <th width="60%" rowspan="2"><div id="map_canvas" style="width:100%; height:800px;"></div></th>
+    <th bgcolor = "#132639" height="50">
+      <h3>News</h3>
+      <h2><font color="#00FF00" size="+1"><marquee color = "white" bgcolor="#538cc6"  direction="up"  scrollamount="1" height="100%"><CENTER>Pikachu sighted in Edinburgh. Due to a security breach at CodeClan, Edinburgh. At approximately 07:00 AM, in castle Terrace, a Pokeball was dropped and a number of pokemon escaped. Inside sources say that someone called Jeff was to blame as the ball dropped from his pocket while he was asleep in the door of a local business. This has been unconfirmed</marquee></font></h2>
 
-        <script type="text/javascript" src=https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-        <script type="text/javascript">
-          function initialize(){
+    </th>
+  </tr>
+  <tr>
+    <th  >
+      <iframe src="../generatePokemon.html" width="100%" height="100%"></iframe>
 
-            var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-            var icons = {
-              parking: {
-                icon: iconBase + 'parking_lot_maps.png'
-              },
-              library: {
-                icon: iconBase + 'library_maps.png'
-              },
-              info: {
-                icon: iconBase + 'info-i_maps.png'
-              }
-            };
+    </th>
+    
+  </table>
 
-            var triangleCoords = [
-              {lat: 55.934357, lng: -3.209697},
-              {lat: 55.928779, lng: -3.245230},
-              {lat: 55.952237, lng: -3.211585},
-              
-              {lat: 55.970878, lng: -3.171073},
-              {lat: 55.946855, lng: -3.113566},
 
-              {lat: 55.922816, lng: -3.150645}
 
-            ];
+  <script type="text/javascript" src=https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+  <script type="text/javascript">
+    function initialize(){
+
+      var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+      var icons = {
+        parking: {
+          icon: iconBase + 'parking_lot_maps.png'
+        },
+        library: {
+          icon: iconBase + 'library_maps.png'
+        },
+        info: {
+          icon: iconBase + 'info-i_maps.png'
+        }
+      };
+
+      var triangleCoords = [
+      {lat: 55.934357, lng: -3.209697},
+      {lat: 55.928779, lng: -3.245230},
+      {lat: 55.952237, lng: -3.211585},
+
+      {lat: 55.970878, lng: -3.171073},
+      {lat: 55.946855, lng: -3.113566},
+
+      {lat: 55.922816, lng: -3.150645}
+
+      ];
 
             // Construct the polygon.
             var bermudaTriangle = new google.maps.Polygon({
@@ -54,14 +77,14 @@
 
 
             var myOptions = {
-              zoom:12,
+              zoom:13,
               center: new google.maps.LatLng(55.945443, -3.202644),
               mapTypeId: google.maps.MapTypeId.ROADMAP}
 
               map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
 
               var marker = new google.maps.Marker( {
-                position: new google.maps.LatLng(55.945443, -3.202644),
+                position: new google.maps.LatLng(55.934357,-3.209697),
                 map: map,
                 title: "Bulbasour",
                 url: "http://www.wikipedia.org/",
@@ -69,33 +92,63 @@
 
               });
 
-              infowindow1= new google.maps.InfoWindow();
+              infowindow= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker,'click',function () {
                 //infowindow1.setContent("<a href=http://pokeapi.co/api/v2/pokemon/1/">+"Bulbasour is on the prowl - catch him while you can!></a>");
-                infowindow1.setContent("<a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR>Weight:=150")
-                infowindow1.open(map,marker);
+                infowindow.setContent("<a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR>Weight:=150")
+                infowindow.open(map,marker);
                 // type: info
               });
 
               var marker1 = new google.maps.Marker( {
-                              position: new google.maps.LatLng(55.95, -3.202644),
-                              map: map,
-                              title: "Pikachu",
-                              animation: google.maps.Animation.DROP,
+                position: new google.maps.LatLng(55.95, -3.202644),
+                map: map,
+                title: "Pikachu",
+                animation: google.maps.Animation.DROP,
                               // type: info
                             });
 
-                            infowindow2= new google.maps.InfoWindow();
-                            listener=google.maps.event.addListener (marker1,'click',function () {
-                              infowindow1.setContent("Pikachu is here, you'd better hurry");
-                              infowindow1.open(map,marker1);
-                            });
+              infowindow1= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker1,'click',function () {
+                infowindow1.setContent("<a href='http://pokeapi.co/api/v2/pokemon/25/'>Pikachu is here, you'd better hurry</a><BR>Weight:=150");
+
+                infowindow1.open(map,marker1);
+              });
+
+              var marker2 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.946602, -3.201989),
+                map: map,
+                title: "Snorlax",
+                animation: google.maps.Animation.DROP,
+                                            // type: info
+                                          });
+
+              infowindow2= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker2,'click',function () {
+                infowindow2.setContent("Snorlax is asleep in a doorway with Jeff - take your time");
+                infowindow2.open(map,marker1);
+              });
+
+              var marker3 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.952237, -3.211585),
+                map: map,
+                title: "Squirtle",
+                animation: google.maps.Animation.DROP,
+                                                          // type: info
+                                                        });
+
+              infowindow3= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker3,'click',function () {
+                infowindow3.setContent("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.");
+                infowindow3.open(map,marker1);
+              });
+
 
                             // Define the LatLng coordinates for the polygon's path.
-                                    
-                                                  bermudaTriangle.setMap(map);
 
-            }
+                            bermudaTriangle.setMap(map);
+
+                          }
 
 
     // );
@@ -109,25 +162,25 @@
     // );
 
 
-    </script>
-
-    <div id="map_canvas" style="width:900px; height:800px;"></div>
-
-    <script type="text/javascript">
-      initialize();
-    </script>
+  </script>
 
 
-   
+
+  <script type="text/javascript">
+    initialize();
+  </script>
+
+
+
     <!-- <div id="question">Question</div>
     <br>
-  <!-- <!--   <p id="countryA">< -->
+    <!-- <!-- <!-- <!--   <p id="countryA">< -->
     <button id="more">More</button>
     <button id="less">Less</button>
     <hr>
     <div id="score">Score : 0</div>
     <br>
     <div id = "map">map</div> -->
- -->
-  </body>
+  --> --> -->
+</body>
 </html>
