@@ -26,7 +26,7 @@
     </th>
   </tr>
   <tr>
-    <th  >
+    <th  BGCOLOR="GREEN">
       <iframe src="../generatePokemon.html" width="100%" height="100%"></iframe>
 
     </th>
@@ -78,7 +78,7 @@
 
             var myOptions = {
               zoom:13,
-              center: new google.maps.LatLng(55.945443, -3.202644),
+              center: new google.maps.LatLng(55.946452, -3.177753),
               mapTypeId: google.maps.MapTypeId.ROADMAP}
 
               map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
@@ -88,6 +88,7 @@
                 map: map,
                 title: "Bulbasour",
                 url: "http://www.wikipedia.org/",
+                icon: 'http://orig05.deviantart.net/257e/f/2013/284/7/6/free_bouncy_bulbasaur_icon_by_kattling-d6q2fij.gif',
                 animation: google.maps.Animation.DROP,
 
               });
@@ -95,54 +96,145 @@
               infowindow= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker,'click',function () {
                 //infowindow1.setContent("<a href=http://pokeapi.co/api/v2/pokemon/1/">+"Bulbasour is on the prowl - catch him while you can!></a>");
-                infowindow.setContent("<a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR>Weight:=150")
+                infowindow.setContent("<a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR>Bulbasaur is a small, quadruped Pokémon that has blue-green skin with darker green patches.<BR><img src ='http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/96px-001Bulbasaur.png'>")
                 infowindow.open(map,marker);
                 // type: info
               });
 
               var marker1 = new google.maps.Marker( {
-                position: new google.maps.LatLng(55.95, -3.202644),
+                position: new google.maps.LatLng(55.947678, -3.175736),
                 map: map,
                 title: "Pikachu",
+                 icon: 'http://orig08.deviantart.net/bef9/f/2009/098/a/5/pikachu___by_bestary.gif', 
                 animation: google.maps.Animation.DROP,
                               // type: info
                             });
 
               infowindow1= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker1,'click',function () {
-                infowindow1.setContent("<a href='http://pokeapi.co/api/v2/pokemon/25/'>Pikachu is here, you'd better hurry</a><BR>Weight:=150");
-
+                infowindow1.setContent("<H2><U>Pikachu</U></H2><a href='http://pokeapi.co/api/v2/pokemon/25/'>Pikachu is here, you'd better hurry</a><BR><img src ='http://www.freeiconspng.com/uploads/pikachu-png-icon-6.png'>");
+                
                 infowindow1.open(map,marker1);
               });
 
               var marker2 = new google.maps.Marker( {
-                position: new google.maps.LatLng(55.946602, -3.201989),
+                position: new google.maps.LatLng(55.954828, -3.199210),
                 map: map,
                 title: "Snorlax",
+                icon: 'https://img.pokemondb.net/sprites/ruby-sapphire/shiny/snorlax.png',
                 animation: google.maps.Animation.DROP,
                                             // type: info
                                           });
 
               infowindow2= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker2,'click',function () {
-                infowindow2.setContent("Snorlax is asleep in a doorway with Jeff - take your time");
-                infowindow2.open(map,marker1);
+                infowindow2.setContent("<H2><U>Snorlax</U></H2>Snorlax is asleep in a doorway with Jeff - take your time<BR><img src ='http://www.serebii.net/typingds/pokemon/143.png'>"
+                  );
+
+          
+
+                infowindow2.open(map,marker2);
               });
 
               var marker3 = new google.maps.Marker( {
-                position: new google.maps.LatLng(55.952237, -3.211585),
+                position: new google.maps.LatLng(55.935910, -3.177691),
                 map: map,
                 title: "Squirtle",
+                icon: 'http://photos1.blogger.com/blogger/6342/1707/320/i_zenigame3.gif',
                 animation: google.maps.Animation.DROP,
                                                           // type: info
                                                         });
 
               infowindow3= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker3,'click',function () {
-                infowindow3.setContent("Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.");
+                infowindow3.setContent("<H2><U>Squirtle</U></H2>Squirtle's shell is not merely used for protection.<BR> The shell's rounded shape and the grooves on its surface help minimize resistance in water.<BR><img src ='http://www.serebii.net/typingds/pokemon/007.png'>");
+
+
+                
                 infowindow3.open(map,marker1);
               });
 
+              var marker4 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.967638, -3.174373),
+                map: map,
+                title: "Eevee",
+                url: "http://www.wikipedia.org/",
+                animation: google.maps.Animation.DROP,
+icon: 'http://fc05.deviantart.net/fs71/f/2012/305/2/1/free_bouncy_eevee_icon_by_kattling-d5jnjl3.gif',
+              });
+              infowindow4= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker4,'click',function () {
+                infowindow4.setContent(
+                  "<H2><U>Eevee</U></H2>Eevee is a mammalian, quadruped creature with primarily brown fur<BR><img src ='http://vignette1.wikia.nocookie.net/pokemon/images/c/ce/133Eevee_BW_anime.png/revision/latest?cb=20140810044703'>"
+
+
+                  );
+                infowindow4.open(map,marker4);
+              });
+
+              var marker5 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.946981, -3.158870),
+                map: map,
+                title: "Psyduck",
+                icon: 'http://orig13.deviantart.net/c447/f/2016/221/9/2/psyduck_icon_by_gelidwolf-dadb0r5.gif',
+                animation: google.maps.Animation.DROP,
+                                                          // type: info
+                                                        });
+
+              infowindow5= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker5,'click',function () {
+                infowindow5.setContent("<H2><U>PsyDuck</U></H2>Psyduck is a yellow Pokémon that resembles a duck or bipedal platypus.");
+
+                infowindow5.open(map,marker5);
+              });
+
+              var marker6 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.942481, -3.128333),
+                map: map,
+                title: "Slopoke",
+                icon: 'http://cdn.bulbagarden.net/upload/1/1f/Spr_5b_079.png',
+                animation: google.maps.Animation.DROP,
+                                                          // type: info
+                                                        });
+
+              infowindow6= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker6,'click',function () {
+                infowindow6.setContent("<H2><U>Slopoke</U></H2>Slopoke is a pink creature that resembles a cross between a salamander and a hippopotamus.");
+
+                infowindow6.open(map,marker6);
+              });
+
+              var marker7 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.928807, -3.161094),
+                map: map,
+                title: "Charizard",
+                icon: 'https://i.dstatic.com/images/pokemon/front/normal/mega%20charizard%20x.png',
+                animation: google.maps.Animation.DROP,
+                                                          // type: info
+                                                        });
+
+              infowindow7= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker7,'click',function () {
+                infowindow7.setContent("<H2><U>Charizard</U></H2>It is said that Charizard’s fire burns hotter if it has experienced harsh battles.");
+
+                infowindow7.open(map,marker7);
+              });
+              
+              var marker8 = new google.maps.Marker( {
+                position: new google.maps.LatLng(55.947127, -3.202082),
+                map: map,
+                title: "Codeclan Pokemon Gym",
+                icon: 'https://pbs.twimg.com/profile_images/606015765700091905/dv5RE0l9_normal.jpg',
+                animation: google.maps.Animation.DROP,
+                                                          // type: info
+                                                        });
+
+              infowindow8= new google.maps.InfoWindow();
+              listener=google.maps.event.addListener (marker8,'click',function () {
+                infowindow8.setContent("<B><U>Codeclan</U></b><BR>CodeClan is the leading provider of software development in the UK. It is also the central pokemon gym for Scotland");
+
+                infowindow8.open(map,marker8);
+              });
 
                             // Define the LatLng coordinates for the polygon's path.
 
@@ -174,13 +266,13 @@
 
     <!-- <div id="question">Question</div>
     <br>
-    <!-- <!-- <!-- <!--   <p id="countryA">< -->
+   <!--  <!-- <!-- <!-- <!--   <p id="countryA">< -->
     <button id="more">More</button>
     <button id="less">Less</button>
     <hr>
     <div id="score">Score : 0</div>
     <br>
     <div id = "map">map</div> -->
-  --> --> -->
+  --> --> --> -->
 </body>
 </html>
