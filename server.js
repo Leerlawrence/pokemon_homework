@@ -3,7 +3,9 @@ var app = express();
 var path = require('path');
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/splash.html'));
+
+  res.sendFile(path.join(__dirname + '/pikachurun.html'))
+  // res.sendFile(path.join(__dirname + '/splash.html'));
 });
 
 app.use(express.static('public'));
