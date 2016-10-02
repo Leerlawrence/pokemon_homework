@@ -1,7 +1,7 @@
 <html>
 <head>
-
-  <link rel="icon" href="http://example.com/favicon.png">
+  <link rel="icon" href="/images/favicon.png">
+  
   <title>Pokemon Gone - Gotta get a life</title>
   <script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js"> </script>
   <script src='index.js'></script>
@@ -10,60 +10,68 @@
 <body >
 
 
-  <table WIDTH="100%" BORDER='1'>
+  <table WIDTH="100%" HEIGHT="100%" BORDER='1'>
 
-    <th colspan="2" bgcolor="red"><CENTER><IMG SRC="./images/pokemonegone1.gif" />
+    <th width="60%" colspan="2" bgcolor="red"><CENTER><IMG SRC="./images/pokemonegone1.gif" /><BR>
+    <a href="http://localhost:3000/splash.html" FONT-SIZE="12">home</a>
     </th>
     
   </tr>
   <tr>
-    <th width="60%" rowspan="2"><div id="map_canvas" style="width:100%; height:800px;"></div></th>
-    <th bgcolor = "#132639" height="50">
-      <h3>News</h3>
-      <h2><font color="#00FF00" size="+1"><marquee color = "white" bgcolor="#538cc6"  direction="up"  scrollamount="1" height="100%"><CENTER>Pikachu sighted in Edinburgh. Due to a security breach at CodeClan, Edinburgh. At approximately 07:00 AM, in castle Terrace, a Pokeball was dropped and a number of pokemon escaped. Inside sources say that someone called Jeff was to blame as the ball dropped from his pocket while he was asleep in the door of a local business. This has been unconfirmed</marquee></font></h2>
+    <th width="65%" rowspan="2" bgcolor="yellow"><h1><i>Pokedar</h1><div id="map_canvas" style="width:100%; height:850px;"></div></th>
+    <th  height="100" bgcolor= "#538cc6">
+      <h1 class="norm" >News</h2>
+        <HR>
+          <h2><font  size="5" color="white">
+            <!-- <marquee color = "white" bgcolor="#538cc6"  direction="up"  scrollamount="4" height="100%"> -->
+            <CENTER><I>Due to a security breach at CodeClan, Edinburgh. At approximately 07:00 AM, in castle Terrace, a Pokeball was dropped and a number of pokemon escaped. Inside sources say that someone called Jeff was to blame as the ball dropped from his pocket while he was asleep in the door of a local business. This has been unconfirmed
+              <BR><CENTER>
+                
+                  <!-- </marquee> -->
+                </font></h2>
 
 
-    </th>
-  </tr>
-  <tr>
-    <th  BGCOLOR="GREEN">
-      <iframe src="../generatePokemon.html" width="100%" height="100%"></iframe>
+              </th>
+            </tr>
+            <tr>
+              <th  BGCOLOR="GREEN">
+                <iframe src="../generatePokemon.html" width="100%" height="100%"></iframe>
 
-    </th>
-    
-  </table>
+              </th>
+
+            </table>
 
 
 
-  <script type="text/javascript" src=https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+            <script type="text/javascript" src=https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 
-  <script type="text/javascript">
-    function initialize(){
+            <script type="text/javascript">
+              function initialize(){
 
-      var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-      var icons = {
-        parking: {
-          icon: iconBase + 'parking_lot_maps.png'
-        },
-        library: {
-          icon: iconBase + 'library_maps.png'
-        },
-        info: {
-          icon: iconBase + 'info-i_maps.png'
-        }
-      };
+                var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+                var icons = {
+                  parking: {
+                    icon: iconBase + 'parking_lot_maps.png'
+                  },
+                  library: {
+                    icon: iconBase + 'library_maps.png'
+                  },
+                  info: {
+                    icon: iconBase + 'info-i_maps.png'
+                  }
+                };
 
-      var triangleCoords = [
-      {lat: 55.934357, lng: -3.209697},
-      {lat: 55.928779, lng: -3.245230},
-      {lat: 55.952237, lng: -3.211585},
+                var triangleCoords = [
+                {lat: 55.934357, lng: -3.209697},
+                {lat: 55.928779, lng: -3.245230},
+                {lat: 55.952237, lng: -3.211585},
 
-      {lat: 55.970878, lng: -3.171073},
-      {lat: 55.946855, lng: -3.113566},
+                {lat: 55.970878, lng: -3.171073},
+                {lat: 55.946855, lng: -3.113566},
 
-      {lat: 55.922816, lng: -3.150645}
+                {lat: 55.922816, lng: -3.150645}
 
-      ];
+                ];
 
             // Construct the polygon.
             var bermudaTriangle = new google.maps.Polygon({
@@ -88,7 +96,7 @@
                 map: map,
                 title: "Bulbasour",
                 url: "http://www.wikipedia.org/",
-                icon: 'http://orig05.deviantart.net/257e/f/2013/284/7/6/free_bouncy_bulbasaur_icon_by_kattling-d6q2fij.gif',
+                icon: 'http://cdn.bulbagarden.net/upload/thumb/b/b8/001Bulbasaur_Dream.png/60px-001Bulbasaur_Dream.png',
                 animation: google.maps.Animation.DROP,
 
               });
@@ -96,7 +104,7 @@
               infowindow= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker,'click',function () {
                 //infowindow1.setContent("<a href=http://pokeapi.co/api/v2/pokemon/1/">+"Bulbasour is on the prowl - catch him while you can!></a>");
-                infowindow.setContent("<a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR>Bulbasaur is a small, quadruped Pokémon that has blue-green skin with darker green patches.<BR><img src ='http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/96px-001Bulbasaur.png'>")
+                infowindow.setContent("<h2><a href='http://pokeapi.co/api/v2/pokemon/1/'>Bulbasour</a><BR><h2>Bulbasaur is a small, quadruped Pokémon that has blue-green skin with darker green patches.</h2><BR><img src ='http://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/96px-001Bulbasaur.png'>")
                 infowindow.open(map,marker);
                 // type: info
               });
@@ -105,7 +113,7 @@
                 position: new google.maps.LatLng(55.947678, -3.175736),
                 map: map,
                 title: "Pikachu",
-                 icon: 'http://orig08.deviantart.net/bef9/f/2009/098/a/5/pikachu___by_bestary.gif', 
+                icon: 'http://coloradopeakpolitics.com/wp-content/uploads/2016/08/025Pikachu_XY_anime_3-100x100.png', 
                 animation: google.maps.Animation.DROP,
                               // type: info
                             });
@@ -131,16 +139,16 @@
                 infowindow2.setContent("<H2><U>Snorlax</U></H2>Snorlax is asleep in a doorway with Jeff - take your time<BR><img src ='http://www.serebii.net/typingds/pokemon/143.png'>"
                   );
 
-          
+
 
                 infowindow2.open(map,marker2);
               });
 
               var marker3 = new google.maps.Marker( {
-                position: new google.maps.LatLng(55.935910, -3.177691),
+                position: new google.maps.LatLng(55.930064, -3.238853),
                 map: map,
                 title: "Squirtle",
-                icon: 'http://photos1.blogger.com/blogger/6342/1707/320/i_zenigame3.gif',
+                icon: 'http://vignette4.wikia.nocookie.net/fantendo/images/3/33/Squirtle_SSB.png/revision/latest/scale-to-width-down/100?cb=20150617213008',
                 animation: google.maps.Animation.DROP,
                                                           // type: info
                                                         });
@@ -160,7 +168,7 @@
                 title: "Eevee",
                 url: "http://www.wikipedia.org/",
                 animation: google.maps.Animation.DROP,
-icon: 'http://fc05.deviantart.net/fs71/f/2012/305/2/1/free_bouncy_eevee_icon_by_kattling-d5jnjl3.gif',
+                icon: 'http://fc05.deviantart.net/fs71/f/2012/305/2/1/free_bouncy_eevee_icon_by_kattling-d5jnjl3.gif',
               });
               infowindow4= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker4,'click',function () {
@@ -199,7 +207,7 @@ icon: 'http://fc05.deviantart.net/fs71/f/2012/305/2/1/free_bouncy_eevee_icon_by_
 
               infowindow6= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker6,'click',function () {
-                infowindow6.setContent("<H2><U>Slopoke</U></H2>Slopoke is a pink creature that resembles a cross between a salamander and a hippopotamus.");
+                infowindow6.setContent("<H2><U>Slopoke</U></H2>Slopoke is a pink creature that resembles a cross<br>between a salamander and a hippopotamus.");
 
                 infowindow6.open(map,marker6);
               });
@@ -221,26 +229,42 @@ icon: 'http://fc05.deviantart.net/fs71/f/2012/305/2/1/free_bouncy_eevee_icon_by_
               });
               
               var marker8 = new google.maps.Marker( {
-                position: new google.maps.LatLng(55.947127, -3.202082),
+                position: new google.maps.LatLng(55.932422, -3.186988),
                 map: map,
-                title: "Codeclan Pokemon Gym",
-                icon: 'https://pbs.twimg.com/profile_images/606015765700091905/dv5RE0l9_normal.jpg',
+                title: "MikeyMon",
+                icon: '/images/rsz_mikeymon.gif',
                 animation: google.maps.Animation.DROP,
                                                           // type: info
                                                         });
 
               infowindow8= new google.maps.InfoWindow();
               listener=google.maps.event.addListener (marker8,'click',function () {
-                infowindow8.setContent("<B><U>Codeclan</U></b><BR>CodeClan is the leading provider of software development in the UK. It is also the central pokemon gym for Scotland");
+                infowindow8.setContent("<B><U>MikeyMon</U></b><BR>The latest recruit to the Pokemon team - MikeyMon has special coding powers");
 
                 infowindow8.open(map,marker8);
-              });
+});
+var marker9 = new google.maps.Marker( {
+  position: new google.maps.LatLng(55.947500, -3.202282),
+  map: map,
+  title: "Codeclan Pokeball",
+  icon: 'http://static.wixstatic.com/media/56db6f_9364037a3c164a05af700384ecedeab2~mv2.png_srz_60_60_85_22_0.50_1.20_0.00_png_srz',
+  animation: google.maps.Animation.DROP,
+                                                            // type: info
+                                                          });
+
+infowindow9= new google.maps.InfoWindow();
+listener=google.maps.event.addListener (marker9,'click',function () {
+  infowindow9.setContent("<B><U>Pokeball</U></b><BR><BR><h2>The PokeBall is at the CodeClan Pokemon Gym - don't lose it - you've already lost the Pokemon!!</h3>");
+
+  infowindow9.open(map,marker9);
+
+});
 
                             // Define the LatLng coordinates for the polygon's path.
 
-                            bermudaTriangle.setMap(map);
+ bermudaTriangle.setMap(map);
 
-                          }
+}
 
 
     // );
@@ -263,16 +287,6 @@ icon: 'http://fc05.deviantart.net/fs71/f/2012/305/2/1/free_bouncy_eevee_icon_by_
   </script>
 
 
-
-    <!-- <div id="question">Question</div>
-    <br>
-   <!--  <!-- <!-- <!-- <!--   <p id="countryA">< -->
-    <button id="more">More</button>
-    <button id="less">Less</button>
-    <hr>
-    <div id="score">Score : 0</div>
-    <br>
-    <div id = "map">map</div> -->
-  --> --> --> -->
+  
 </body>
 </html>

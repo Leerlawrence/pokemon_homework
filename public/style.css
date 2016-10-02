@@ -4,13 +4,37 @@ background-color: white;*/
 background-repeat: no-repeat;
 }
 
-
+h1. norm {
+  color: red;
+    
+}
 
     h1 {
       color: red;
         text-shadow: 15px 15px #cccccc;
     }
   
+    /* unvisited link */
+    a:link {
+        color: yellow;
+        font-size:14pt;
+    }
 
-}
+    /* visited link */
+    a:visited {
+        color: yellow;
+        font-size:14pt;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: hotpink;
+        font-size:14pt;
+    }
+
+    /* selected link */
+    a:active {
+        color: yellow;
+        font-size:14pt;
+    }
 

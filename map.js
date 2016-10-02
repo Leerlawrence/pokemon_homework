@@ -11,15 +11,15 @@
     <h1>Pokemon Gone</h1>
     
    
-    <div id="question">Question</div>
-    <br>
-  <!--   <p id="countryA">< -->
-    <button id="more">More</button>
-    <button id="less">Less</button>
-    <hr>
-    <div id="score">Score : 0</div>
-    <br>
-    <div id = "map">map</div>
+  //   <div id="question">Question</div>
+  //   <br>
+  // <!--   <p id="countryA">< -->
+  //   <button id="more">More</button>
+  //   <button id="less">Less</button>
+  //   <hr>
+  //   <div id="score">Score : 0</div>
+  //   <br>
+  //   <div id = "map">map</div>
 
   </body>
 </html>

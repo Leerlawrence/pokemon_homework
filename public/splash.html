@@ -11,24 +11,29 @@
     </TABLE>
 <!-- <H1><FONT COLOR="White"> Hello</H1> -->
 <CENTER>
-
-<h2><i>Hi guys, hope you had a good day 'catching 'em all' yesterday. Got a hard day's training today - let's go - cool!</h2>
+<!-- <FONT COLOR="Red"> -->
+<h2>Hi guys, hope you had a good day 'catching 'em all' yesterday. Got a hard day's training today - let's go - cool!</h2>
+<!-- </FONT> -->
 <DIV><img src="http://localhost:3000/images/clantrainers.jpg" alt="Gotta catch em all"/>
-<br><br>
+<h1>Trainers - select your pokeba'</h1>
 <a href = "javascript:AlertIt1()"> 
-<img src="/images/pokeball.jpeg" alt="Gotta catch em all"/>
+<!-- <img src="/images/pokeball.jpeg" alt="Gotta catch em all"/> -->
+<img src="/images/anipokeball.gif" width="250" alt="Gotta catch em all"/>
 </a>
 
 <a href = "map.html" onclick=warn()>
-<img src="/images/pokeball.jpeg" alt="Gotta catch em all"/>
+<img src="/images/anipokeball.gif" width="250" alt="Gotta catch em all"/>
 </a>
 
 <a href = "javascript:AlertIt()"> 
-<img src="/images/pokeball.jpeg" alt="Gotta catch em all"/>
+<img src="/images/anipokeball.gif" width="250" alt="Gotta catch em all"/>
+</a>
+
+<a href = "javascript:AlertIt2()"> 
+<img src="/images/anipokeball.gif" width="250" alt="Gotta catch em all"/>
 </a>
 
 
-<h1>Select your pokeball</h1>
 
 
 
@@ -48,6 +53,12 @@ window.location="";
 
 function AlertIt1() {
 var answer = alert("Please do not disturb, Robbie had a rough night and he's asleep in this one!")
+if (answer)
+window.location="";
+}
+
+function AlertIt2() {
+var answer = alert("Team Rocket have pinched all of your Pokemon - get out there and hunt them down!")
 if (answer)
 window.location="";
 }
